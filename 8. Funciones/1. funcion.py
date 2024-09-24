@@ -9,4 +9,3 @@ def despedir(nombre): #Sin retorno
     
 despedida = despedir("Juan")
 
-despedida
