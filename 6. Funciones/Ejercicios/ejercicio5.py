@@ -1,3 +1,7 @@
+'''Sistema de Tienda con Carrito de Compras
+Crea un sistema de tienda donde el usuario pueda agregar productos a un carrito, ver el carrito y calcular el total de la compra. Usa funciones para agregar productos, mostrar el carrito y calcular el total.
+'''
+
 def agregar_producto(carrito, producto, precio):
     carrito.append({"producto": producto, "precio": precio})
     print("Producto agregado exitosamente...") 
