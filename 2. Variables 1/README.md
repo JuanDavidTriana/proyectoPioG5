@@ -33,11 +33,20 @@ Las variables deben seguir ciertas reglas al nombrarlas:
 - No pueden contener espacios ni caracteres especiales.
 - No pueden ser palabras reservadas de Python (como `if`, `while`, `for`, etc.).
 
-Ejemplo de nombres válidos:
+**Ejemplo de nombres válidos:**
 ```python
 nombre_completo = "Juan Pérez"
 edad_usuario = 30
 ```
+
+**Ejemplo de nombres inválidos:**
+```python
+2nombre = "Juan"  # Comienza con un número
+nombre completo = "Juan"  # Contiene un espacio
+for = "loop"  # Es una palabra reservada
+```
+
+Usar nombres de variables incorrectos puede causar errores de sintaxis y dificultar la legibilidad del código.
 
 ## Entrada de Datos en Python
 
@@ -61,7 +70,35 @@ edad = int(edad)  # Convertir a entero
 print(f"En 5 años tendrás {edad + 5} años.")
 ```
 
+## Impresión de Datos en Python
+
+Hay diferentes maneras de imprimir datos en Python:
+
+1. **Usando `print()`**: Esta es la forma más común de mostrar datos en la consola.
+   ```python
+   print("Hola, mundo!")
+   ```
+
+2. **Formato de Cadenas (`f-strings`)**: Permiten incluir variables directamente dentro de una cadena de texto.
+   ```python
+   nombre = "Juan"
+   print(f"Hola, {nombre}!")  # Salida: Hola, Juan!
+   ```
+
+3. **Método `format()`**: Otra forma de incluir variables en una cadena.
+   ```python
+   nombre = "Juan"
+   print("Hola, {}!".format(nombre))  # Salida: Hola, Juan!
+   ```
+
+4. **Separadores y Finales**: Puedes personalizar cómo se imprime la salida usando los parámetros `sep` y `end` de la función `print()`.
+   ```python
+   print("Hola", "mundo", sep=", ", end="!\n")  # Salida: Hola, mundo!
+   ```
+
 ### Resumen
 
 - Las **variables** almacenan datos y su tipo se determina automáticamente.
 - Utiliza `input()` para recibir datos del usuario, y recuerda convertirlos al tipo adecuado si es necesario.
+- Asegúrate de usar nombres de variables válidos para evitar errores.
+- Existen diferentes métodos para imprimir datos, cada uno con sus propias características y ventajas.
