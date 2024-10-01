@@ -15,5 +15,9 @@ def operaciones(a,b):
     
     return dic_opciones
     
-operaciones_dic = operaciones(10,5)
-print(f"Suma: {operaciones_dic["suma"]} y resta: {operaciones_dic["resta"]}")
+password = "pio12345"
+
+passwordopcion = input("Ingrese contraseña: ")
+if passwordopcion == password:
+    operaciones_dic = operaciones(10,5)
+    print(f"Suma: {operaciones_dic["suma"]} y resta: {operaciones_dic["resta"]}")

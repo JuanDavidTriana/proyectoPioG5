@@ -15,12 +15,18 @@ print(type(numero3))
 print(numero3)
 
 #Variables Cadena Caractere()
-nombre1 = "Juan "
-nombre2 = 'David'
+variable1 = "1"
+variable2 = '2'
 
-nombre_completo = nombre1 + nombre2
-print(type(nombre_completo))
-print(nombre_completo)
+varible3 = variable1 + variable2
+print(type(varible3))
+print(varible3)
+
+#Variables Bool
+variable = True
+
+print(type(variable))
+print(variable)
 
 #Reglas de variables
 año = 2024 #la ñ no es un caracater valido 

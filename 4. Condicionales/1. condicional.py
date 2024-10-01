@@ -20,7 +20,7 @@ else:
 
 nota = 5
 
-if nota == 5:
+if nota == 5: #True
     print("Excelente")
 elif nota >= 4:
     print("Aprobo")

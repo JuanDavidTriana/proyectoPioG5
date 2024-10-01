@@ -39,3 +39,8 @@ Operadores
 * remove(): Elimina el primer elemento que coincide con el valor
 * len(): Devuelve la longitud de la lista
 '''
+lista = [1,"Hola", True]
+
+lista = [1,"Hola", True, lista]
+
+print(lista)
