@@ -65,10 +65,19 @@ peliculas = [
 
 
 def mostrar_todas_peliculas(peliculas):
+    """
+    Muestra todas las películas en una tabla bonita.
+
+    Recibe una lista de películas y muestra cada una de ellas en una tabla
+    con los atributos nombre, estreno, género, clasificación, duración y
+    actores. La tabla se muestra en la consola.
+    """
     for pelicula in peliculas:
+        # Crear una tabla para mostrar la película
         tabla = PrettyTable()
         tabla.field_names = ["Atributo", "Valor"]
         
+        # Agregar filas a la tabla con los atributos de la película
         tabla.add_row(["Nombre", pelicula['nombre']])
         #tabla.add_row(["Descripción", pelicula['descripcion']])
         tabla.add_row(["Estreno", pelicula['estreno']])
@@ -78,9 +87,10 @@ def mostrar_todas_peliculas(peliculas):
         tabla.add_row(["Director", ', '.join(pelicula['director'])])
         tabla.add_row(["Actores", ', '.join(pelicula['actores'])])
         
+        # Mostrar la tabla en la consola
         print(tabla)
-        print("\n" + "-"*40 + "\n")  # Separador entre tablas
-
+        # Separador entre tablas
+        print("\n" + "-"*40 + "\n")
 def actualizar_una_pelicula(id_actulizar,peliculas):
     for indice, pelicula in enumerate(peliculas):
             if id_actulizar == indice:
