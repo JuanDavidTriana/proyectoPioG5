@@ -59,22 +59,23 @@ def mostrar_carrito(carrito):
         print(table)
     return carrito
 
-def eliminar_del_carrito(carrito, productos):
-    mostrar_carrito(carrito)
+def eliminar_producto_del_carrito(carrito_de_compra, lista_de_productos):
+    """Elimina un producto del carrito y actualiza el stock en la lista de productos."""
+    mostrar_carrito(carrito_de_compra)
     try:
-        opcion = int(input("Introduce el producto que desees eliminar del carrito: "))
-        if 1 <= opcion <= len(carrito):
-            producto = carrito.pop(opcion - 1)
-            for p in productos:
-                if p["nombre"] == producto["nombre"]:
-                    p["stock"] += producto["stock"]
-                    print(f"Has eliminado {producto['nombre']} del carrito")
+        indice_eliminar = int(input("Introduce el producto que desees eliminar del carrito: "))
+        if 1 <= indice_eliminar <= len(carrito_de_compra):
+            producto_eliminar = carrito_de_compra.pop(indice_eliminar - 1)
+            for producto in lista_de_productos:
+                if producto["nombre"] == producto_eliminar["nombre"]:
+                    producto["stock"] += producto_eliminar["stock"]
+                    print(f"Has eliminado {producto_eliminar['nombre']} del carrito")
                     break
         else:
             print("El producto no existe")
     except Exception as e:
         print("Se ha presentado un error", e)
-    return carrito, productos
+    return carrito_de_compra, lista_de_productos
 
 def mostar_total_carrito(carrito):
     total = 0
